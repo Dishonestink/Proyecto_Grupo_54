@@ -1,0 +1,88 @@
+body{
+    margin: 0 auto;
+}
+#fondo1{
+    width: 50%;
+    height: 1000px;
+    /*background-image: url('fondo.jpg');*/
+    background-color: black;
+    color: #000;
+}
+#is-admin{
+    border-radius: 4px;
+    background-color: #a9a9a9;
+    width: 45%;
+    height: 650px;
+    margin-left: 710px;
+    margin-top: 50px;
+    box-shadow: 2px 2px 5px #999;
+    position:static;
+}
+.style-form{
+    width: 300px;
+    margin-left: 65px;
+    border-radius: 5px;
+    font-size: 13px;
+    
+}
+input{
+    padding: 6px;
+}
+.style-form1{
+    font-size: 19px;
+    text-align: left;
+    margin-top: 28px;
+    margin-bottom: 13px;
+}
+.x{
+    margin-top: 30px;
+}
+.buton{
+    margin-top: 45px;
+    font-size: 19px;
+    border-radius: 5px;
+    padding: 5px;
+}
+#label1{
+    font-size: 40px;
+    text-align: center;
+    padding-top: 40px;
+    font-family: 'Acme', sans-serif;
+}
+#icon{
+    display: inline-flex;
+}
+#icono{
+    margin-left: 25px;
+    width: 10%;
+    height: 7%;
+    border-radius: 100%;
+}
+#label2{
+    color: #fff;
+    font-family: 'Acme', sans-serif;
+    margin-left: 20px;
+}
+#copy{
+    text-align: center;
+    margin-top: 90px;
+}
+#a{
+    text-decoration: none;
+    margin-top: 6px;
+}
+#succes{
+    text-align: center;
+    position: absolute;
+    margin-top: -120px;
+    color: oldlace;
+    margin-left: -90px;
+}
+#warning{
+    text-align: center;
+    position: absolute;
+    margin-top: -120px;
+    color: oldlace;
+    margin-left: -75px;
+    width: 30%;
+}
