@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Configuración usuario</title>
+        <!-- CSS-->
+        <link href="css/estilo.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!--Menu Acordeon-->
+            <div class="border-end bg-white" id="sidebar-wrapper">
+                <div class="sidebar-heading border-bottom bg-light">Gestor de profesores</div>
+                <div class="sidebar-heading border-bottom bg-light">Perfil Administrador</div>
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Información personal de profesores</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Configuración de Usuario</a>
+                </div>
+            </div>
+            <!-- Sección Configuracion de Usuario-->
+            <div id="page-content-wrapper">
+
+                <div class="container-fluid">
+                    <h1 class="mt-4">Configuración de usuario</h1>
+                    <div id="Form">
+                  
+                        <form action="action_page.php" method="get">
+                  
+                          <label for="Correo electrónico" > Correo electrónico: </label>
+                          <input type="text" id="correo" name="correo" placeholder="ej: nombre@correo.com"><br><br>
+                  
+                          <label for="Usuario" >Usuario:</label>
+                          <input type="text" name="nombre" placeholder="ej: Juan" minlength="5" maxlength="40" required /><br><br>
+                  
+                          <label for="contraseña" >Clave:</label>
+                          <input type="password" name="pass" placeholder="ingrese Contraseña" minlength="11" required /><br><br>
+                          
+                          <label for="repetir contraseña" >Clave:</label>
+                          <input type="password" name="pass" placeholder="repetir Contraseña" minlength="11" required /><br><br>
+                          </div>
+                        </form>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
