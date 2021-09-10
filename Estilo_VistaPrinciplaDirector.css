@@ -1,0 +1,18 @@
+body {
+    margin: 0px;
+}
+
+.menú{
+    width:200px;
+    height:auto;
+    margin-right:0px;
+    border:solid black
+}
+div#Superior{
+    background-color: black;
+    color:white;
+    width: 5%;
+    height: 50px;
+}
+
+
