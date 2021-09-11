@@ -20,14 +20,14 @@ body{
     width: 300px;
     margin-left: 65px;
     border-radius: 5px;
-    font-size: 13px;
-    
+    font-size: 14px;
+    margin-bottom: 30px;
 }
 input{
     padding: 6px;
 }
 .elementosRegistroName{
-    font-size: 19px;
+    font-size: 24px;
     text-align: left;
     margin-top: 28px;
     margin-bottom: 13px;
@@ -36,11 +36,13 @@ input{
 .arreglo{
     margin-top: 30px;
 }
-.buton{
-    margin-top: 45px;
+.button{
+    margin-top: 15px;
     font-size: 19px;
     border-radius: 5px;
     padding: 5px;
+    width: 315px;
+
 }
 #formularioName{
     font-size: 40px;
@@ -66,7 +68,8 @@ input{
 }
 #copy{
     text-align: center;
-    margin-top: 90px;
+    margin-top: 70px;
+    font-size: 17px;
 }
 #a{
     text-decoration: none;

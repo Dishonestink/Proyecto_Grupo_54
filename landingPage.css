@@ -9,18 +9,27 @@ body{
 #inicioSesionFormulario{
     background-color: #a9a9a9;
     width: 440px;
-    height: 650px;
+    height: 450px;
     margin-left: 1150px;
-    margin-top: -380px;
+    margin-top: -550px;
     position:absolute;
     border-radius: 4px;
+    padding-top: 145px;
 }
 .estiloFormulario{
     width: 300px;
     margin-left: 65px;
     border-radius: 5px;
+    text-align: center;
+
+}
+.estiloFormularioInput{
+    width: 300px;
+    margin-left: 65px;
+    border-radius: 5px;
     font-size: 14px;
 }
+
 input{
     padding: 6px;
 }
@@ -28,30 +37,36 @@ input{
     margin-bottom: 30px;
 }
 .button{
+    width: 315px;
     margin-top: 35px;
-    font-size: 19px;
+    font-size: 23px;
     border-radius: 5px;
     padding: 5px;
 }
 #bannerName{
-    font-size: 40px;
+    font-size: 45px;
     text-align: center;
-    padding-top: 40px;
     font-family: 'Acme', sans-serif;
+    margin-top: -100px;
+    margin-left: 70px;
+    position:absolute;
 }
 #copy{
     text-align: center;
-    margin-top: 120px;
-}
-.espacioTop{
-    margin-top: 30px;
-}
-label{
-    margin-bottom: 15px;
+    margin-top: 110px;
     font-size: 17px;
 }
+/*
+.espacioTop{
+    padding-top: 160px;
+}
+label{
+    margin-top: 150px;
+    margin-bottom: 15px;
+    font-size: 17px;
+}*/
 .label-size{
-    font-size: 21px;
+    font-size: 25px;
 }
 #icon{
     display: inline-flex;
@@ -75,9 +90,10 @@ label{
 }
 h3{
     color: white;
-    font-size: 20px;
+    font-size: 25px;
 }
 #nav{
+    font-size: 50px;
     color: white;
     margin-top: 200px;
 }
