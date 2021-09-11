@@ -1,24 +1,22 @@
 body{
     margin: 0 auto;
 }
-#fondo1{
+#fondoPrincipal{
     width: 50%;
     height: 1000px;
-    /*background-image: url('fondo.jpg');*/
     background-color: black;
     color: #000;
 }
-#is-admin{
+#cuerpoFormularioRegistro{
     border-radius: 4px;
     background-color: #a9a9a9;
-    width: 45%;
+    width: 440px;
     height: 650px;
     margin-left: 710px;
     margin-top: 50px;
-    box-shadow: 2px 2px 5px #999;
-    position:static;
+    position:absolute;
 }
-.style-form{
+.elementosRegistro{
     width: 300px;
     margin-left: 65px;
     border-radius: 5px;
@@ -28,13 +26,14 @@ body{
 input{
     padding: 6px;
 }
-.style-form1{
+.elementosRegistroName{
     font-size: 19px;
     text-align: left;
     margin-top: 28px;
     margin-bottom: 13px;
 }
-.x{
+/* Este arreglo es para un elemento especifico*/
+.arreglo{
     margin-top: 30px;
 }
 .buton{
@@ -43,7 +42,7 @@ input{
     border-radius: 5px;
     padding: 5px;
 }
-#label1{
+#formularioName{
     font-size: 40px;
     text-align: center;
     padding-top: 40px;
@@ -57,11 +56,13 @@ input{
     width: 10%;
     height: 7%;
     border-radius: 100%;
+    margin-top: 30px;
 }
-#label2{
+#bannerName{
     color: #fff;
     font-family: 'Acme', sans-serif;
     margin-left: 20px;
+    margin-top: 30px;
 }
 #copy{
     text-align: center;
