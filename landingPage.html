@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Fuentes de Google para palabras-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+
+
+    <!-- CSS Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- JavaScript Boostrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+
+    <!-- CSS de la pagina Landing Page -->
+    <link rel="stylesheet" href="landingPage.css">
+
+    <!-- Meta (no tocar)-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titulo de la pagina -->
+    <title>Landing Page</title>
+</head>
+<body>
+    <!-- Cuerpo principal-->
+    <div id="cuerpoPagina">
+        <!-- Icono y Banner (Esto es temporal mientras desarrollamos nuestro logo y banner)-->
+        <div id="icon"><img src="icono.png" id="icono" alt=""><a id="a" href="/" target="_blank"><h1 id="bannerNav">Gestion de Estudiantes</h1></a></div>
+
+
+
+        <!-- Informacion temporal con Lorem, ya despues se rellena con la informacion real-->
+        <div id="info">
+        <h1 id="nav">Proyecto grupo 54 - 1</h1>
+        <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            <h3> Officiis quam laudantium obcaecati, quidem fugit, optio architecto,</h3>
+             <h3>quae quis nulla debitis error cupiditate aliquam sit </h3>
+            <h3>molestias beatae vitae nostrum. Reprehenderit libero minus unde amet.</h3>
+            <h3>Distinctio cum ea nulla iure natus! Voluptates vitae ut eaque</h3>
+            <h3> alias beatae esse assumenda eum perspiciatis perferendis velit </h3>
+        </div>
+
+
+        <!-- Formulario de Inicio de Sesion -->
+        <div id="inicioSesionFormulario" onsubmit="return validarIncioSesion()">
+            <form action="" id="formularioAll">
+                <label class="estiloFormulario espacio" for="" id="bannerName">Iniciar Sesion</label>
+                <label class="estiloFormulario espacioTop label-size" for="email">Correo Electronico</label>
+                <input class="estiloFormulario espacio" type="email" name="email" id="email" placeholder="Ingrese su correo electronico">
+                <label class="estiloFormulario label-size" for="password">Contraseña</label>
+                <input class="estiloFormulario espacio" type="password" name="password" id="password" placeholder="Ingrese su contraseña">
+                <button class="estiloFormulario button" type="submit">Iniciar Sesion</button>
+            </form>
+
+
+            <!--Copyright-->
+            <h6 id="copy"> © copyright Mision TIC 2022</h6>
+        </div>
+    </div>
+</body>
+<script src="landingPage.js"></script>
+</html>

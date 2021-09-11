@@ -1,0 +1,86 @@
+body{
+    margin: auto;
+}
+#cuerpoPagina{
+    background-color: black;
+    height: 990px;
+    width: 70%;
+}
+#inicioSesionFormulario{
+    background-color: #a9a9a9;
+    width: 440px;
+    height: 650px;
+    margin-left: 1150px;
+    margin-top: -380px;
+    position:absolute;
+    border-radius: 4px;
+}
+.estiloFormulario{
+    width: 300px;
+    margin-left: 65px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+input{
+    padding: 6px;
+}
+.espacio{
+    margin-bottom: 30px;
+}
+.button{
+    margin-top: 35px;
+    font-size: 19px;
+    border-radius: 5px;
+    padding: 5px;
+}
+#bannerName{
+    font-size: 40px;
+    text-align: center;
+    padding-top: 40px;
+    font-family: 'Acme', sans-serif;
+}
+#copy{
+    text-align: center;
+    margin-top: 120px;
+}
+.espacioTop{
+    margin-top: 30px;
+}
+label{
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+.label-size{
+    font-size: 21px;
+}
+#icon{
+    display: inline-flex;
+}
+#icono{
+    margin-left: 25px;
+    width: 10%;
+    height: 7%;
+    border-radius: 100%;
+    margin-top: 30px;
+}
+#bannerNav{
+    color: #fff;
+    font-family: 'Acme', sans-serif;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+#a{
+    text-decoration: none;
+    margin-top: 6px;
+}
+h3{
+    color: white;
+    font-size: 20px;
+}
+#nav{
+    color: white;
+    margin-top: 200px;
+}
+#info{
+    margin-left: 80px;
+}
