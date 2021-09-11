@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información Personal Profesores</title>
+    <link rel="stylesheet" href="Estilo/estilos_infoProfes.css">
+
+</head>
+<body>
+
+    <div id="contenido">
+        <nav id= "menu">
+            <!--EMPIEZA EL NAVEGADOR-->
+          <header>
+             <h1>Gestión de Profesores</h1>
+          </header>
+          <ul>
+              <!-- Perfil Administrador, que en esta página tiene 2 sub-tems: Info personal profes y Gestión profes-->
+           <li><a href="navegador_profe.html">Perfil Administrador</a>
+            <ul>
+              <li><a href="infoProfes.html">Información Personal Profesores</a></li>
+              <li><a href="#">Configuración Usuario</a></li>
+            </ul> 
+           </li>         
+          </ul> 
+        </nav>
+      
+    </div>
+
+    <div id="Informacion-Gral" >
+
+        <div id="Form">
+
+          <!--FORMULARIO DONDE SE CONSIGNA LA INFORMACIÓN DEL PROFESOR-->  
+    
+          <h1>Información Personal </h1>
+    
+          <form action="action_page.php" method="get">
+    
+            <label for="nombreCompleto" >Nombres y Apellidos: </label>
+            <input type="text" id="nombreC" name="nombreC" placeholder="Ingresa Nombres Apellidos"><br><br>
+    
+            <label for="id" >Número de Identificación:</label>
+            <input type="number" id="ident" name="ident" placeholder="Ingresa Identificación"><br><br>
+
+            <label for="profe" >Profesión:</label>
+            <input type="text" id="profesion" name="profesion" placeholder="Ingresa Profesión"><br><br>
+    
+            <label for="Tel_Movil" >Teléfono Móvil:</label>
+            <input type="number" id="movil" name="movil" placeholder="Ingresa Teléfono Móvil"><br><br>
+    
+            <label for="Tel_fijo" >Teléfono Fijo:</label>
+            <input type="number" id="fijo" name="fijo" placeholder="Ingresa Teléfono Fijo"><br><br>
+    
+            <label for="direccion" >Dirección de Residencia:</label>
+            <input type="text" id="dir" name="dir" placeholder="Ingresa Dirección"><br><br>
+    
+            <label for="G_sanguineo" >Grupo Sanguineo:</label>
+            <input type="text" id="Grupo_sang" name="Grupo_sang" placeholder="Ingresa Grupo Sanguineo"><br><br>
+    
+            <label for="RH" >Factor RH:</label>
+            <input type="text" id="Factor_RH" name="Factor_RH" placeholder="Ingresa Factor RH "><br><br>
+    
+            <label for="eps" >Entidad promotora de Salud:</label>
+            <input type="text" id="entidad_eps" name="entidad_eps" placeholder="Ingresa EPS"><br><br>
+
+            <!--Formulario de selección desplegable-->
+            <label for="vincu" >Tipo de vinculación:</label>
+            <select name="vinculacion" id="vinculacion">
+                <option value="1">Contrato a termino Indefinido</option>
+                <option value="2">Contrato de Obra o Labor</option>
+                <option value="1">Contrato por Prestación de Servicios</option>
+            </select>
+    
+            <div class="button">
+              <button type="submit">Siguiente</button>
+            </div>
+          </form>
+        </div>
+
+
+    
+</body>
+</html>
