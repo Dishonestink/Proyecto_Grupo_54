@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Configuración usuario</title>
-        <!-- CSS-->
-        <link href="css/estilo.css" rel="stylesheet" />
-    </head>
-    <body>
-        <div class="d-flex" id="wrapper">
-            <!--Menu Acordeon-->
-            <div class="border-end bg-white" id="sidebar-wrapper">
-                <div class="sidebar-heading border-bottom bg-light">Gestor de profesores</div>
-                <div class="sidebar-heading border-bottom bg-light">Perfil Administrador</div>
-                <div class="list-group list-group-flush">
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Información personal de profesores</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Configuración de Usuario</a>
-                </div>
-            </div>
-            <!-- Sección Configuracion de Usuario-->
-            <div id="page-content-wrapper">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información Personal Profesores</title>
+    <link rel="stylesheet" href="Estilo/estilos_infoProfes.css">
 
-                <div class="container-fluid">
-                    <h1 class="mt-4">Configuración de usuario</h1>
-                    <div id="Form">
-                  
-                        <form action="action_page.php" method="get">
+</head>
+<body>
+
+    <div id="contenido">
+        <nav id= "menu">
+            <!--EMPIEZA EL NAVEGADOR-->
+          <header>
+             <h1>Gestión de Profesores</h1>
+          </header>
+          <ul>
+              <!-- Perfil Administrador, que en esta página tiene 2 sub-tems: Info personal profes y Gestión profes-->
+           <li><a href="navegador_profe.html">Perfil Administrador</a>
+            <ul>
+              <li><a href="infoProfes.html">Información Personal Profesores</a></li>
+              <li><a href="#">Configuración Usuario</a></li>
+            </ul> 
+           </li>         
+          </ul> 
+        </nav>
+      
+    </div>
+
+    <div id="Informacion-Gral" >
+
+        <div id="Form">
+
+          <!--FORMULARIO DONDE SE CONSIGNA LA CONFIGURACIÓN DE USUARIO-->  
+    
+          <h1>Configuración de usuario </h1>
+    
+          <form action="action_page.php" method="get">
                   
                           <label for="Correo electrónico" > Correo electrónico: </label>
                           <input type="text" id="correo" name="correo" placeholder="ej: nombre@correo.com"><br><br>
@@ -41,10 +51,25 @@
                           <label for="repetir contraseña" >Clave:</label>
                           <input type="password" name="pass" placeholder="repetir Contraseña" minlength="11" required /><br><br>
                           </div>
-                        </form>
-                      </div>
-                </div>
+          <div class="button">
+              <button type="submit">Guardar</button>
             </div>
+                        </form>
         </div>
-    </body>
+        
+
+        </div id="Form_img">
+           <!--FORMULARIO CON MÉTODO INPUT-->
+          <form action="" method="post">
+            <input type="file" name="file" id="archivo_subir" accept=".jpg,.png,.jpeg">
+            <!--Se usará para previsualizacion-->
+            <div id="preview" class="estilo_Img"></div>
+            <!-- //mejores -->
+          </form>
+         <script src="#"></script> <!--Aquí va el enlace a JS-->
+        </div>
+
+
+    
+</body>
 </html>
