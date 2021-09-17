@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <div id="contenido">
+    <section id="contenido">
         <nav id= "menu">
             <!--EMPIEZA EL NAVEGADOR-->
           <header>
@@ -27,11 +27,11 @@
           </ul> 
         </nav>
       
-    </div>
+    </section>
 
-    <div id="Informacion-Gral" >
+    <section id="Informacion-Gral" >
 
-        <div id="Form">
+        <section id="Form">
 
           <!--FORMULARIO DONDE SE CONSIGNA LA CONFIGURACIÓN DE USUARIO-->  
     
@@ -40,7 +40,7 @@
           <form action="action_page.php" method="get">
                   
                           <label for="Correo electrónico" > Correo electrónico: </label>
-                          <input type="text" id="correo" name="correo" placeholder="ej: nombre@correo.com"><br><br>
+                          <input type="text" id="email" name="email" placeholder="ej: nombre@correo.com"><br><br>
                   
                           <label for="Usuario" >Usuario:</label>
                           <input type="text" name="nombre" placeholder="ej: Juan" minlength="5" maxlength="40" required /><br><br>
@@ -51,25 +51,11 @@
                           <label for="repetir contraseña" >Clave:</label>
                           <input type="password" name="pass" placeholder="repetir Contraseña" minlength="11" required /><br><br>
                           </div>
-          <div class="button">
+          <section class="button">
               <button type="submit">Guardar</button>
-            </div>
+            </section>
                         </form>
-        </div>
-        
-
-        </div id="Form_img">
-           <!--FORMULARIO CON MÉTODO INPUT-->
-          <form action="" method="post">
-            <input type="file" name="file" id="archivo_subir" accept=".jpg,.png,.jpeg">
-            <!--Se usará para previsualizacion-->
-            <div id="preview" class="estilo_Img"></div>
-            <!-- //mejores -->
-          </form>
-         <script src="#"></script> <!--Aquí va el enlace a JS-->
-        </div>
-
-
+        </section>
     
 </body>
 </html>

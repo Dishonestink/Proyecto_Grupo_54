@@ -69,3 +69,76 @@ header h1 {
     min-width: 280px;  /*el tamaño que puse al navegador*/
     border: none;
 }
+
+/*los li que estén dentro de menu y que además cuando se pase el mouse (por el hover) por el menú, deberá aparecer el submenu*/
+/*además deben ser directos de ul, por eso el >ul*/
+#menu li:hover > ul{
+    display: block;
+    float: right;
+
+}
+ 
+
+#Informacion-Gral{
+    background-color: white;
+    color: black;
+    height: 660px;
+    width: auto;
+    display: flex;
+    margin: none;
+    margin-left: 0px;
+}
+
+
+#Form{
+    background-color: white;
+    width: auto;
+    height: 600px;
+    margin: 80px;
+    padding: 10px;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+#Form h1{
+    background-color: white;
+    height: auto;
+    color: black;
+    font-size:x-large;
+
+}
+
+/*texto antes del input*/
+label{
+    color: black;
+    font-size: large;
+    line-height: 200%;
+}
+
+input{
+    border  : 1px solid black;
+    padding : 5px 10px;
+    margin  : 0;
+    width   : 250px;
+    height: 10px;
+    background: white;
+}
+
+
+button {
+    position     : relative;
+    left         : none;
+    top          : 20px;
+    padding      : 2px;
+    border       : 2px solid #333;
+    background   : none;
+    cursor       : pointer;
+    margin-left: 800px;
+
+}
+
+button:hover{
+    outline: none;
+    background: #62aac7;
+    color: black;
+}
