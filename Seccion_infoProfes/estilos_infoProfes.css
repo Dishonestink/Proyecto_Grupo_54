@@ -14,17 +14,11 @@ body {
     background-color: white;
 }
 
-header {
-    height: 50px;
-    width: 300px;
+#menu h1{
+    color: white;
     background-color: black;
-    color:white;
-}
-
-header h1 {
-    font-size: 20px;
-    text-align: center;
-    line-height: 50px;
+    height: 30px;
+    padding-top: 10px;
 }
 
 #menu {
