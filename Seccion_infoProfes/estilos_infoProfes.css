@@ -136,3 +136,30 @@ button:hover{
     background: #62aac7;
     color: black;
 }
+
+
+#Form_img{
+    position: absolute; /*usamos absoluta para que la posicione en una parte específica de la ventana del nav*/
+    top: 50px; 
+    right: 40px;
+}
+
+#div_file{
+    position: relative;
+    background-color: grey;
+    color: white;
+    margin: 20px;
+    padding: 25px;
+    width: 70px;
+}
+
+#archivo_subir{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;  /*Para quedar transprente. el rsngo es 0-1, donde 0 es lo más opaco*/
+}
