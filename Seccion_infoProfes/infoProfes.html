@@ -80,13 +80,17 @@
           </form>
         </section>
         
+        <!--PARA INSERTAR IMG-->
 
-        <section id="Form_img">
+       <section id="Form_img">
            <!--FORMULARIO CON MÉTODO INPUT-->
-          <form action="" method="post">
-            <input type="file" name="file" id="archivo_subir" accept=".jpg,.png,.jpeg">
+          <div id = "div_file">
+            <p id = "texto_boton">Adjuntar img</p>
+            <form action="" method="post"> <!--En "action" va el repositoria a donde cargarian las img-->
+              <input type="file" name="file" id="archivo_subir" accept=".jpg,.png,.jpeg">
+          </div>
+ 
             <!--Se usará para previsualizacion-->
-            <div id="preview" class="estilo_Img"></div>
             <!-- //mejores -->
           </form>
          <script src="#"></script> <!--Aquí va el enlace a JS-->
