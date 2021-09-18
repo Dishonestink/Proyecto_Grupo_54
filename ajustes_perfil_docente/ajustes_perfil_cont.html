@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajustes Perfil Docente</title>
+    <link rel="stylesheet" href="Estilo/estilos.css">
+    
+</head>
+<body>
+  <section id="navegador">
+    
+    <nav id= "menu">
+      <ul>
+        <h1>Gestión de Estudiantes</h1>
+       <li><a href="ajustes_perfil_cont.html">Perfil Profesor</a>
+       <li><a href="#">Privacidad y Contraseñas</a>
+       <li><a href="#">Cerrar Sesión</a></li>
+      </ul> 
+    </nav>
+  </section>
+  
+  <section id="contenido">
+      <!--Caja 1 que va en color gris-->
+      <div id= "ajuste"> 
+        <h1>Ajustes</h1>
+      </div>
+
+      <!--Imagen del perfil profesor-->
+      <img src="dinosaurio.jpg" alt="Poner foto de Perfil del profesor"> 
+
+
+      <!--Caja 2 donde va la información general dle profe-->
+      <div>
+          <h1>Nombre Profesor</h1>
+          <h3>Docente</h3>
+
+          <form action="action_page.php" method="get">
+
+            <label for="nombre_Apellido" >Nombres y Apellidos: </label>
+            <input type="text" id="nombre_Apellido" name="nombre_Apellido" placeholder=""><br><br>
+            <button id="boton_1">Listo</button>
+    
+            <label for="correo" >Correo Eléctronico:</label>
+            <input type="text" id="correo" name="correo" placeholder=""><br><br>
+            <button id="boton_2">Listo</button>
+
+            <label for="Contraseña" >Contraseña actual:</label>
+            <input type="text" id="Contraseña" name="Contraseña" placeholder=""><br><br>
+            <button id="boton_2">Listo</button>
+
+        </div>
+
+  </section>
+    
+</body>
+</html>
