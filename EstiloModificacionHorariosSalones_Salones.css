@@ -137,31 +137,76 @@ además acá se ocultan las sublistas para un estilo más dinámico*/
     text-align: left;
     padding:10px;
     margin:20px;
+    margin-bottom:30px;
 }
 
-#Métodos {
+#HeaderSentence {
+    margin-bottom: 40px;
+}
+
+.busqueda {
+    display:flex;
     flex-wrap: nowrap;
     margin:0px;
 }
 
-#Métodos_1 {
-    display:block;
-    width: 20%;
-    height:auto;
-    margin-right: 0%;
+.lupa {
+    position:relative;
+    transform:rotate(-90deg);
+
 }
 
+#Métodos {
+    display:flex;
+    flex-wrap: nowrap;
+    margin-left:10%;
+    margin-right: 10%;
+    /*align-items:stretch;
+    justify-content:baseline;*/
+    width: 80%;
+}
+
+#Métodos_1 {
+    flex-wrap: nowrap;
+    width: auto;
+    height:auto;
+    margin-right: 0%;
+    align-items:center;
+    justify-content:flex-start;
+}
+
+/*#Métodos_oculto {
+    width: auto;
+    height:auto;
+    display:hidden;
+}*/
+
 #Métodos_2 {
-    display:block;
-    width: 20%;
+    display:flex;
+    flex-wrap: nowrap;
+    width: auto ;
     height:auto;
     margin-left: 0px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.ContenedorTabla {
+    overflow-y: auto;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    max-height: 300px;
+    border:2px solid black;
 }
 
 table {
-    border:2px solid black;
-    width: 80%;
-    float:inline-start;
+    display:inline-table;
+    
+    width: 100%;
+    max-height:318px; 
+    /*margin-left: 10%;
+    margin-right: 10%;*/
 }
 
 tr,th,td {
