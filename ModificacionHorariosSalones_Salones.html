@@ -63,31 +63,33 @@
             <!--Fin de elemento de navegación-->
 
 
-            <section id="divCentralDer">
-                <header id="headerDer">
+            <section id="divCentralDer"> <!--Se identifica una sección central con la etiqueta semántica de SECTION-->
+                <header id="headerDer"> <!--Se añade otra etiqueta semántica de HEADER-->
                     <h1 id="HeaderSentence"><b>Modificación de horarios y salones de clase</b></h1>
                     <h3>Busqueda de salones de clase</h3>
-                    <div class="busqueda">
+                    <div class="busqueda"> <!--Se restringe un sección para la barra de busqueda y el botón sumbit-->
                         <input type="search" name="Lupa" placeholder="¿Qué desea buscar?">
                         <input for="Lupa" class="lupa"  type="submit" value="&#8981;">
                     </div>
                     
                 </header>
-                <div id="Métodos">
-                    <div id="Métodos_1" style="flex-grow: 1;">
+                <!--Fin de Header-->
+                <div id="Métodos"> <!--Sección para los botones que modifican la vista y la tabla-->
+                    <div id="Métodos_1" style="flex-grow: 1;"><!--botones de vista-->
                         <button>Salones</button>
                         <button>Horarios</button>
                     </div>
                     <!--<div id="Métodos_oculto">
                         Sección oculta
                     </div>-->
-                    <div id=Métodos_2 style="flex-grow: 1;"> 
+                    <div id=Métodos_2 style="flex-grow: 1;"> <!--botones de tabla-->
                         <button>Modificar</button>
                         <button>Guardar</button>
                     </div>
                 </div>
-                <div class="ContenedorTabla">
+                <div class="ContenedorTabla"> <!--Seccion que contiene la tabla y la barra de desplazamiento-->
                     <table>
+                        <!--Informacion de la tabla-->
                         <tr>
                             <th>Salón</th>
                             <th>Estado</th>
@@ -196,11 +198,12 @@
                             <td>Grado 6°-1 </td>
                             <td>Lunes - Viernes 6:00 - 11:59 am</td>
                         </tr>
+                        <!--Fin información de tabla-->
                     </table>
                 </div>
                 
             </section>
-
+            <!--Fin de la sección SECTION-->
 
         </div>
 

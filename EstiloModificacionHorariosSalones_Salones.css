@@ -132,7 +132,7 @@ además acá se ocultan las sublistas para un estilo más dinámico*/
     border:0.5px solid black;
     margin-bottom: 3px;
 }
-
+/*Caracteristicas del HEADER derecho*/
 #headerDer {
     text-align: left;
     padding:10px;
@@ -140,23 +140,23 @@ además acá se ocultan las sublistas para un estilo más dinámico*/
     margin-bottom:30px;
 }
 
-#HeaderSentence {
+#HeaderSentence { /*Especifica la distancia entre el header y la sección de botones*/
     margin-bottom: 40px;
 }
 
-.busqueda {
+.busqueda {/*Indica que la sección de busqueda es flexible y debe mantenerse en una linea*/
     display:flex;
     flex-wrap: nowrap;
     margin:0px;
 }
 
-.lupa {
-    position:relative;
+.lupa { /*Se gira la posicion del simbolo de lupa*/
     transform:rotate(-90deg);
 
 }
 
-#Métodos {
+#Métodos { /*La sección de botones serán flexible, mantenerse alineados verticalmente y 
+    centrados horizontalmente*/
     display:flex;
     flex-wrap: nowrap;
     margin-left:10%;
@@ -166,7 +166,7 @@ además acá se ocultan las sublistas para un estilo más dinámico*/
     width: 80%;
 }
 
-#Métodos_1 {
+#Métodos_1 { /*Se alinean al costado izquierdo (inicio)*/
     flex-wrap: nowrap;
     width: auto;
     height:auto;
@@ -181,7 +181,7 @@ además acá se ocultan las sublistas para un estilo más dinámico*/
     display:hidden;
 }*/
 
-#Métodos_2 {
+#Métodos_2 {/*Se alinean al costado derecho (fin)*/
     display:flex;
     flex-wrap: nowrap;
     width: auto ;
@@ -191,7 +191,7 @@ además acá se ocultan las sublistas para un estilo más dinámico*/
     justify-content: flex-end;
 }
 
-.ContenedorTabla {
+.ContenedorTabla {/*Se añade la barra de desplazamiento y se especifica dicha region sumada a la tabla*/
     overflow-y: auto;
     width: 80%;
     margin-left: 10%;
@@ -200,9 +200,8 @@ además acá se ocultan las sublistas para un estilo más dinámico*/
     border:2px solid black;
 }
 
-table {
+table { /*Se acota el área de la tabla dinámica al tamaño de la pantalla*/
     display:inline-table;
-    
     width: 100%;
     max-height:318px; 
     /*margin-left: 10%;
