@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../CSS/EstiloModificacionEstudiantes.css">
+    
 </head>
 <body><div id="divPrincipal"> <!--Se crea una división que contenga toda la página-->
 
@@ -66,9 +67,9 @@
             <header id="headerDer"> <!--Se añade otra etiqueta semántica de HEADER-->
                 <span><h1 id="HeaderSentence"><b>Modificación de Estudiantes</b></h1></span>
                 
-                <div class="busqueda"> <!--Se restringe un sección para la barra de busqueda y el botón sumbit-->
+                <div class="busqueda" id="buscador"> <!--Se restringe un sección para la barra de busqueda y el botón sumbit-->
                     <h5>Buscador de estudiantes</h5>
-                    <input class="Barra" type="search" name="Lupa" placeholder="¿A quién desea buscar?">
+                    <input class="Barra" type="search" name="Lupa" placeholder="¿A quién desea buscar?" v-model="buscador">
                     <input for="Lupa" class="lupa"  type="submit" value="&#8981;">
                 </div>
                 
@@ -77,7 +78,10 @@
             <div id="Métodos"> <!--Sección para los botones que modifican la vista y la tabla-->
                 <div id="Métodos_1" style="flex-grow: 1;"><!--botones de vista-->
                     <h4 id="EnunFiltro">Filtre por grado</h4>
-                    <select>
+                    <select id="grado" v-model="grado">
+                        <option selected>
+
+                        </option>
                         <option>
                             6°
                         </option>
@@ -97,7 +101,10 @@
                             11°
                         </option>
                     </select>
-                    <select>
+                    <select id="curso" v-model="curso">
+                        <option selected>
+                            
+                        </option>
                         <option>
                             1
                         </option>
@@ -116,100 +123,39 @@
                     Sección oculta
                 </div>-->
                 <div id=Métodos_2 style="flex-grow: 1;"> <!--botones de tabla-->
+                    
                     <button>Añadir</button>
                     <button>Eliminar</button>
                     <button>Guardar</button>
                 </div>
             </div>
             <div class="ContenedorTabla"> <!--Seccion que contiene la tabla y la barra de desplazamiento-->
-                <table> <!--Información de Tabla-->
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Identificación</th>
-                        <th>Situación de estudiante</th>
-                        <th>Grado actual</th>
-                    </tr>
-                    <tr>
-                        <td>Oscar Campos </td>
-                        <td>234234 </td>
-                        <td>Matriculado </td>
-                        <td>6°-1</td>
-                    </tr>
-                    <tr>
-                        <td>Oscar Campos </td>
-                        <td>234234 </td>
-                        <td>Matriculado </td>
-                        <td>6°-1</td>
-                    </tr>
-                    <tr>
-                        <td>Oscar Campos </td>
-                        <td>234234 </td>
-                        <td>Matriculado </td>
-                        <td>6°-1</td>
-                    </tr>
-                    <tr>
-                        <td>Oscar Campos </td>
-                        <td>234234 </td>
-                        <td>Matriculado </td>
-                        <td>6°-1</td>
-                    </tr>
-                    <tr>
-                        <td>Oscar Campos </td>
-                        <td>234234 </td>
-                        <td>Matriculado </td>
-                        <td>6°-1</td>
-                    </tr>
-                    <tr>
-                        <td>Oscar Campos </td>
-                        <td>234234 </td>
-                        <td>Matriculado </td>
-                        <td>6°-1</td>
-                    </tr>
-                    <tr>
-                        <td>Oscar Campos </td>
-                        <td>234234 </td>
-                        <td>Matriculado </td>
-                        <td>6°-1</td>
-                    </tr>
-                    <tr>
-                        <td>Oscar Campos </td>
-                        <td>234234 </td>
-                        <td>Matriculado </td>
-                        <td>6°-1</td>
-                    </tr>
-                    <tr>
-                        <td>Oscar Campos </td>
-                        <td>234234 </td>
-                        <td>Matriculado </td>
-                        <td>6°-1</td>
-                    </tr>
-                    <tr>
-                        <td>Oscar Campos </td>
-                        <td>234234 </td>
-                        <td>Matriculado </td>
-                        <td>6°-1</td>
-                    </tr>
-                    <tr>
-                        <td>Oscar Campos </td>
-                        <td>234234 </td>
-                        <td>Matriculado </td>
-                        <td>6°-1</td>
-                    </tr>
-                    <tr>
-                        <td>Oscar Campos </td>
-                        <td>234234 </td>
-                        <td>Matriculado </td>
-                        <td>6°-1</td>
-                    </tr>
-                    <tr>
-                        <td>Oscar Campos </td>
-                        <td>234234 </td>
-                        <td>Matriculado </td>
-                        <td>6°-1</td>
-                    </tr>
-
-                    <!--Fin información de tabla-->
-                </table>
+                <div id="app">
+                    <table id="tablaPrincipal" class="table"> <!--Información de Tabla-->
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Identificación</th>
+                            <th>Situación de estudiante</th>
+                            <th>Grado actual</th>
+                        </tr>
+                        <!--<tr>
+                            <td>Oscar Campos </td>
+                            <td>234234 </td>
+                            <td>Matriculado </td>
+                            <td>6°-1</td>
+                        </tr>-->
+                        <tr v-for="item in items">
+                            <td v-text="item.nombre"></td>
+                            <td v-text="item.identificacion"></td>
+                            <td v-text="item.situacion"></td>
+                            <td v-text="item.grado"></td>
+                        </tr>
+                          
+    
+                        <!--Fin información de tabla-->
+                    </table>
+                    
+                </div>
                 <!--Fin de información de tabla-->
             </div>
         </section>
@@ -234,6 +180,10 @@
 
 
 </div>
-    
+<!--<script src="https://unpkg.com/vue@next"></script>--><!--No funciona-->
+<!--<script src="../node_modules/vue/dist/vue.js"></script>--><!--Funciona-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>--><!--Funciona-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script><!--Funciona-->
+<script type="text/javascript" src="../JS/ModificacionEstudiantes.js"></script><!--Funciona-->
 </body>
 </html>
