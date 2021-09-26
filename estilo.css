@@ -9,9 +9,14 @@ body {
 }
 
 #contenido {
+
+	max-width: 600px;	
+	margin: auto;
+	margin-top: 20px;
     width: auto;
-    margin: auto;
+    padding: 20px;
     background-color: white;
+
 }
 
 header {
@@ -114,6 +119,13 @@ label{
     font-size: large;
     line-height: 200%;
 }
+
+ form p2{
+	margin-left: 10px;
+	margin-right: 10px;
+	color:red;
+	font-size: 13px;
+  }
 
 input{
     border  : 1px solid black;
