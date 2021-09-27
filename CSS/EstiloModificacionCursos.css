@@ -2,6 +2,15 @@
     margin:0px;
 }
 
+button,select {
+    cursor:pointer;
+}
+
+select {
+    margin-right:10px;
+    border-radius: 4px;
+}
+
 #divPrincipal {
     background-color: white;
     display: flex;/*Se especifica que el entorno de la página será de tipo flexible*/
@@ -56,6 +65,8 @@
     border-right:1px solid white;
     background-color:white;
     height:100%;
+    max-width:20%;
+    min-width:20%;
     margin: 0%;
     flex-grow: 1;
     padding-left:0px;
@@ -162,7 +173,7 @@ además acá se ocultan las sublistas para un estilo más dinámico*/
 
 .lupa { /*Se gira la posicion del simbolo de lupa*/
     transform:rotate(-90deg);
-
+    cursor:pointer;
 }
 
 #Métodos { /*La sección de botones serán flexible, mantenerse alineados verticalmente y 
@@ -222,6 +233,10 @@ table { /*Se acota el área de la tabla dinámica al tamaño de la pantalla*/
     max-height:318px; 
     /*margin-left: 10%;
     margin-right: 10%;*/
+}
+
+#btnEliminar {
+    margin-left: 40%;
 }
 
 tr,th,td {

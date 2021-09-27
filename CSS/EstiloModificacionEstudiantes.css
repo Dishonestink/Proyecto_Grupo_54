@@ -67,7 +67,8 @@ select {
     border-right:1px solid white;
     background-color:white;
     height:100%;
-    max-width:10%;
+    max-width:20%;
+    min-width:20%;
     margin: 0%;
     flex-grow: 1;
     padding-left:0px;

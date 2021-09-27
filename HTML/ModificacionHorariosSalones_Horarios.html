@@ -76,21 +76,23 @@
                 <!--Fin de Header-->
                 <div id="Métodos"> <!--Sección para los botones que modifican la vista y la tabla-->
                     <div id="Métodos_1" style="flex-grow: 1;"><!--botones de vista-->
-                        <button>Salones</button>
-                        <button>Horarios</button>
+                        <button v-on:click="fhorarios()">Horarios</button>
+                        <button v-on:click="fsalones()">Salones</button>
+                        
                     </div>
                     <!--<div id="Métodos_oculto">
                         Sección oculta
                     </div>-->
                     <div id=Métodos_2 style="flex-grow: 1;"> <!--botones de tabla-->
-                        <button>Añadir</button>
-                        <button>Eliminar</button>
-                        <button>Modificar</button>
+                        <button v-on:click="añadir1()" v-show="horarios" >Añadir</button>
+                        <button v-on:click="añadir2()" v-show="salones" >Añadir</button>
+                        <!--<button>Eliminar</button>
+                        <button>Modificar</button>-->
                         <button>Guardar</button>
                     </div>
                 </div>
                 <div class="ContenedorTabla"> <!--Seccion que contiene la tabla y la barra de desplazamiento-->
-                    <table> <!--Información de Tabla-->
+                    <table v-show="horarios"> <!--Información de Tabla-->
                         <tr>
                             <th>Nombre</th>
                             <th>Identificaión</th>
@@ -98,121 +100,37 @@
                             <th>Asignatura</th>
                             <th>Grados a cargo</th>
                             <th>Horario</th>
+                            <th>Eliminar</th>
                         </tr>
-                        <tr>
-                            <td>William Díaz</td>
-                            <td>123127</td>
-                            <td>Empleado</td>
-                            <td>Español</td>
-                            <td>10° 11°</td>
-                            <td><a href="https://plantillasdememes.com/img/plantillas/nada-no-hay-no-existe01587466097.jpg">Horario</a></td>
-                        </tr>
-                        <tr>
-                            <td>William Díaz</td>
-                            <td>123127</td>
-                            <td>Empleado</td>
-                            <td>Español</td>
-                            <td>10° 11°</td>
-                            <td><a href="https://plantillasdememes.com/img/plantillas/nada-no-hay-no-existe01587466097.jpg">Horario</a></td>
-                        </tr>
-                        <tr>
-                            <td>William Díaz</td>
-                            <td>123127</td>
-                            <td>Empleado</td>
-                            <td>Español</td>
-                            <td>10° 11°</td>
-                            <td><a href="https://plantillasdememes.com/img/plantillas/nada-no-hay-no-existe01587466097.jpg">Horario</a></td>
-                        </tr>
-                        <tr>
-                            <td>William Díaz</td>
-                            <td>123127</td>
-                            <td>Empleado</td>
-                            <td>Español</td>
-                            <td>10° 11°</td>
-                            <td><a href="https://plantillasdememes.com/img/plantillas/nada-no-hay-no-existe01587466097.jpg">Horario</a></td>
-                        </tr>
-                        <tr>
-                            <td>William Díaz</td>
-                            <td>123127</td>
-                            <td>Empleado</td>
-                            <td>Español</td>
-                            <td>10° 11°</td>
-                            <td><a href="https://plantillasdememes.com/img/plantillas/nada-no-hay-no-existe01587466097.jpg">Horario</a></td>
-                        </tr>
-                        <tr>
-                            <td>William Díaz</td>
-                            <td>123127</td>
-                            <td>Empleado</td>
-                            <td>Español</td>
-                            <td>10° 11°</td>
-                            <td><a href="https://plantillasdememes.com/img/plantillas/nada-no-hay-no-existe01587466097.jpg">Horario</a></td>
-                        </tr>
-                        <tr>
-                            <td>William Díaz</td>
-                            <td>123127</td>
-                            <td>Empleado</td>
-                            <td>Español</td>
-                            <td>10° 11°</td>
-                            <td><a href="https://plantillasdememes.com/img/plantillas/nada-no-hay-no-existe01587466097.jpg">Horario</a></td>
-                        </tr>
-                        <tr>
-                            <td>William Díaz</td>
-                            <td>123127</td>
-                            <td>Empleado</td>
-                            <td>Español</td>
-                            <td>10° 11°</td>
-                            <td><a href="https://plantillasdememes.com/img/plantillas/nada-no-hay-no-existe01587466097.jpg">Horario</a></td>
-                        </tr>
-                        <tr>
-                            <td>William Díaz</td>
-                            <td>123127</td>
-                            <td>Empleado</td>
-                            <td>Español</td>
-                            <td>10° 11°</td>
-                            <td><a href="https://plantillasdememes.com/img/plantillas/nada-no-hay-no-existe01587466097.jpg">Horario</a></td>
-                        </tr>
-                        <tr>
-                            <td>William Díaz</td>
-                            <td>123127</td>
-                            <td>Empleado</td>
-                            <td>Español</td>
-                            <td>10° 11°</td>
-                            <td><a href="https://plantillasdememes.com/img/plantillas/nada-no-hay-no-existe01587466097.jpg">Horario</a></td>
-                        </tr>
-                        <tr>
-                            <td>William Díaz</td>
-                            <td>123127</td>
-                            <td>Empleado</td>
-                            <td>Español</td>
-                            <td>10° 11°</td>
-                            <td><a href="https://plantillasdememes.com/img/plantillas/nada-no-hay-no-existe01587466097.jpg">Horario</a></td>
-                        </tr>
-                        <tr>
-                            <td>William Díaz</td>
-                            <td>123127</td>
-                            <td>Empleado</td>
-                            <td>Español</td>
-                            <td>10° 11°</td>
-                            <td><a href="https://plantillasdememes.com/img/plantillas/nada-no-hay-no-existe01587466097.jpg">Horario</a></td>
-                        </tr>
-                        <tr>
-                            <td>William Díaz</td>
-                            <td>123127</td>
-                            <td>Empleado</td>
-                            <td>Español</td>
-                            <td>10° 11°</td>
-                            <td><a href="https://plantillasdememes.com/img/plantillas/nada-no-hay-no-existe01587466097.jpg">Horario</a></td>
-                        </tr>
-                        <tr>
-                            <td>William Díaz</td>
-                            <td>123127</td>
-                            <td>Empleado</td>
-                            <td>Español</td>
-                            <td>10° 11°</td>
-                            <td><a href="https://plantillasdememes.com/img/plantillas/nada-no-hay-no-existe01587466097.jpg">Horario</a></td>
+                        <tr v-for="(item,index) in items1" contenteditable="true">
+                            <td v-text="item.nombre"></td>
+                            <td v-text="item.identificacion"></td>
+                            <td v-text="item.situacion"></td>
+                            <td v-text="item.asignatura"></td>
+                            <td v-text="item.grado"></td>
+                            <td v-text="item.horario"></td>
+                            <td class="celdaEliminacion"><input type="button" class="btnEliminar" value="&#128465;" v-on:click="eliminar1(index)"></td>
                         </tr>
                         <!--Fin información de tabla-->
                     </table>
+                    <table v-show="salones">
+                        <!--Informacion de la tabla-->
+                        <tr>
+                            <th>Salón</th>
+                            <th>Estado</th>
+                            <th>Responsable</th>
+                            <th>Horario</th>
+                            <th>Eliminar</th>
+                        </tr>
+                        <tr v-for="(item,index) in items2" contenteditable="true">
+                            <td v-text="item.salon"></td>
+                            <td v-text="item.estado"></td>
+                            <td v-text="item.responsable"></td>
+                            <td v-text="item.horario"></td>
+                            <td class="celdaEliminacion"><input type="button" class="btnEliminar" value="&#128465;" v-on:click="eliminar2(index)"></td>
+                        </tr>
+                        <!--Fin información de tabla-->
+                    </table>    
                     
                 </div>
             </section>
@@ -237,5 +155,9 @@
 
 
     </div>
+<!--<script src="../node_modules/vue/dist/vue.js"></script>--><!--Funciona-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>--><!--Funciona-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script><!--Funciona-->
+<script type="text/javascript" src="../JS/ModificacionHorariosSalones.js"></script><!--Funciona-->
 </body>
 </html>
