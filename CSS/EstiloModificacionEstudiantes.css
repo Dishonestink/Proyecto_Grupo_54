@@ -240,6 +240,16 @@ tr,th,td {
     border:1px solid black;
     font-size:15px;
     min-height: 40px;
+    max-width: 280px; 
+}
+
+#celdaEliminar {
+    max-width: 20px;
+}
+
+#btnEliminar {
+    cursor:pointer;
+    margin-left: 40%;
 }
 
 /*Caracteristicas de la sección de FOOTER al inferior de la pantalla*/

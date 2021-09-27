@@ -124,9 +124,9 @@
                 </div>-->
                 <div id=Métodos_2 style="flex-grow: 1;"> <!--botones de tabla-->
                     
-                    <button>Añadir</button>
-                    <button>Eliminar</button>
-                    <button>Guardar</button>
+                    <button v-on:click="añadir()">Añadir</button>
+                    <!--<button>Eliminar</button>-->
+                    <button v-on:click="guardar()">Guardar</button>
                 </div>
             </div>
             <div class="ContenedorTabla"> <!--Seccion que contiene la tabla y la barra de desplazamiento-->
@@ -137,6 +137,7 @@
                             <th>Identificación</th>
                             <th>Situación de estudiante</th>
                             <th>Grado actual</th>
+                            <th>Eliminar</th>
                         </tr>
                         <!--<tr>
                             <td>Oscar Campos </td>
@@ -144,11 +145,12 @@
                             <td>Matriculado </td>
                             <td>6°-1</td>
                         </tr>-->
-                        <tr v-for="item in items">
+                        <tr v-for="(item,index) in items" contenteditable="true">
                             <td v-text="item.nombre"></td>
                             <td v-text="item.identificacion"></td>
                             <td v-text="item.situacion"></td>
                             <td v-text="item.grado"></td>
+                            <td id="celdaEliminar"><input id="btnEliminar" type="button" value="&#128465;" v-on:click="eliminar(index)"></td>
                         </tr>
                           
     
