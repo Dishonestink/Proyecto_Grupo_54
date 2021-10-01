@@ -1,7 +1,7 @@
 <template>
     <div>
         <header id="divSuperior"> <!--Se especifica la sección de cabecera HEADER-->
-            <Span>Portal Académico</Span>
+            Portal Académico
         </header>
         <!--Fin del encabezado-->
     </div>

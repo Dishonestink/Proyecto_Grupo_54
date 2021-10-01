@@ -5,7 +5,7 @@
 
                 <!--Primer elemento de lista-->
                 <li class="il_p">
-                    <a href="https://seranking.com/blog/wp-content/uploads/2021/01/404_01-min.jpg">Perfil administrativo<i class="icono izquierda fa fa-star"></i></a>
+                    <a href="https://seranking.com/blog/wp-content/uploads/2021/01/404_01-min.jpg">Perfil administrativo</a>
                     <ul class="ul_s"> 
                         <!--Primer subelemento del primer elemento de lista-->
                         <li class="il_s">
@@ -48,12 +48,8 @@
 
 
 <style scoped>
-/*Se dan las caracteristicas en la sección anterior pero mediante método flexible*/
-.Division {
-    display:flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+nav {
+    width:100%;
 }
 
 
@@ -62,9 +58,7 @@
     border-top:5px solid white;
     border-right:1px solid white;
     background-color:white;
-    height:100%;
-    max-width:20%;
-    min-width:20%;
+    max-height:100%;
     margin: 0%;
     flex-grow: 1;
     padding-left:0px;
@@ -132,45 +126,8 @@ además acá se ocultan las sublistas para un estilo más dinámico*/
 
 
 <script>
-    export default{
-        name: "Menu",
+export default{
+    name: "Menu",
         
-    }
-    let app = new Vue({
-    el:'#divCentralDer',
-    data() {
-        return {
-            items : [
-                {grado:'6°-1',asignatura:'Matemáticas',profesor:'Sandra Gutierrez',contenido:'Matemáticas_6.pdf',asistencia:'Asistencia_Mat_grado_6_1'},
-                {grado:'6°-1',asignatura:'Matemáticas',profesor:'Sandra Gutierrez',contenido:'Matemáticas_6.pdf',asistencia:'Asistencia_Mat_grado_6_1'},
-                {grado:'6°-1',asignatura:'Matemáticas',profesor:'Sandra Gutierrez',contenido:'Matemáticas_6.pdf',asistencia:'Asistencia_Mat_grado_6_1'},
-                {grado:'6°-1',asignatura:'Matemáticas',profesor:'Sandra Gutierrez',contenido:'Matemáticas_6.pdf',asistencia:'Asistencia_Mat_grado_6_1'},
-                {grado:'6°-1',asignatura:'Matemáticas',profesor:'Sandra Gutierrez',contenido:'Matemáticas_6.pdf',asistencia:'Asistencia_Mat_grado_6_1'},
-                {grado:'6°-1',asignatura:'Matemáticas',profesor:'Sandra Gutierrez',contenido:'Matemáticas_6.pdf',asistencia:'Asistencia_Mat_grado_6_1'},
-                {grado:'6°-1',asignatura:'Matemáticas',profesor:'Sandra Gutierrez',contenido:'Matemáticas_6.pdf',asistencia:'Asistencia_Mat_grado_6_1'},
-                {grado:'6°-1',asignatura:'Matemáticas',profesor:'Sandra Gutierrez',contenido:'Matemáticas_6.pdf',asistencia:'Asistencia_Mat_grado_6_1'},
-                ],
-            buscador: '', //Estos valores se usará de filtro
-            grado:'',
-            curso:'',
-        }
-    },
-    methods: {
-        eliminar(row) {
-            if (confirm("¿Está seguro de eliminar?")){
-                this.items.splice(row,1);}
-        },
-        añadir() {
-            this.items.push({
-                nombre:'',
-                identificacion:'',
-                situacion:'',
-                grado:'',
-            })
-        },
-        guardar() {
-            this.items = this.items;
-        },
-    }
-})
+}
 </script>
