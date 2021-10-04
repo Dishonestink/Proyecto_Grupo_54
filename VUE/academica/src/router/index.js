@@ -2,6 +2,10 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import VistaInicialDirector from "../views/VistaInicialDirector.vue";
+import ModificacionCursos from "../views/ModificacionCursos.vue";
+import ModificacionEstudiantes from "../views/ModificacionEstudiantes.vue";
+import ModificacionHorariosSalones from "../views/ModificacionHorariosSalones.vue";
+
 
 Vue.use(VueRouter);
 
@@ -23,8 +27,23 @@ const routes = [
   {
     path: "/",
     name: "VistaInicialDirector",
-    component: VistaInicialDirector
-  }
+    component: VistaInicialDirector,
+  },
+  {
+    path:"/cursos",
+    name:"ModificacionCursos",
+    component: ModificacionCursos,
+  },
+  {
+    path:"/estudiantes",
+    name:"ModificacionEstudiantes",
+    component: ModificacionEstudiantes,
+  },
+  {
+    path:"/horarios-salones",
+    name:"ModificacionHorariosSalones",
+    component:ModificacionHorariosSalones,
+  },
 ];
 
 const router = new VueRouter({
