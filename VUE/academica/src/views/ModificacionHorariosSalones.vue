@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="ContenedorTabla"> <!--Seccion que contiene la tabla y la barra de desplazamiento-->
-                    <table v-show="true"> <!--Información de Tabla-->
+                    <table v-show="horarios"> <!--Información de Tabla-->
                         <tr>
                             <th>Nombre</th>
                             <th>Identificaión</th>
