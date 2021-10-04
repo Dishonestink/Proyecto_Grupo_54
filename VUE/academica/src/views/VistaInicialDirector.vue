@@ -52,7 +52,7 @@ body {
     position:static;
     left:0px;
     top:30px;
-    margin-top: 0px;
+    margin-top: 2%;
     margin-left: 0px;
     height:auto;
     width:100%;

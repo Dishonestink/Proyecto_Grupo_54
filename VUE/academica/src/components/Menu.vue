@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="menu">
         <nav id="divCentralIzq"> <!--Se especifica la sección de la barra de navegación NAV-->
             <ul class="ul_p"> <!--Lista principal-->
 
@@ -22,15 +22,15 @@
                     <ul class="ul_s">
                         <!--Primer subelemento del segundo elemento de la lista-->
                         <li class="il_s">
-                            <a href="https://seranking.com/blog/wp-content/uploads/2021/01/404_01-min.jpg">Modificación de horarios y salones de clase</a>
+                            <router-link to="/horarios-salones">Modificación de horarios y salones de clase</router-link>
                         </li>
                         <!--Segundo subelemento del segundo elemento de la lista-->
                         <li class="il_s">
-                            <a href="https://seranking.com/blog/wp-content/uploads/2021/01/404_01-min.jpg">Modificación de cursos</a>
+                            <router-link to="/cursos">Modificación de cursos</router-link>
                         </li>
                         <!--Tercer subelemento del segundo elemento de la lista-->
                         <li class="il_s">
-                            <a href="https://seranking.com/blog/wp-content/uploads/2021/01/404_01-min.jpg">Modificación de estudiantes</a>
+                            <router-link to="/Estudiantes">Modificación de estudiantes</router-link>
                         </li>
                     </ul>
                 </li>
@@ -48,8 +48,14 @@
 
 
 <style scoped>
+#menu {
+    max-width: 20%;
+    min-width:20%;  
+}
+
 nav {
     width:100%;
+    margin-top: 0px;
 }
 
 
@@ -60,12 +66,20 @@ nav {
     background-color:white;
     max-height:100%;
     margin: 0%;
+    margin-top:0px;
     flex-grow: 1;
     padding-left:0px;
     
 }
+ul {
+    color:black;
+    margin-top:0px;
+    border-bottom: 1px solid black;
+}
 
-
+li:hover {
+    border-bottom: 1px solid black;
+}
 /*Se delimita los elementos de la barra de navegación al borde izquierdo de la pantalla*/
 .ul_p {
     padding:0px;
@@ -75,6 +89,7 @@ nav {
 #divCentralIzq ul, li a {
     display:block;
     text-decoration: none;
+    color:black;
 }
 
 
@@ -82,24 +97,25 @@ nav {
 ul > li {
     display:block;
     border:1px solid black;
+    
 }
 
 
 /*Se modifica los links de los elementos para que no aparezcan subrayados al ser hipervinculos sin ser abiertos*/
-#divCentralIzq li a:active {
+#divCentralIzq li router-link:active {
     text-decoration:none;
     color:black;
 }
 
 /*Se modifica los links de los elementos para que no aparezcan subrayados al ser hipervinculos que fueron abiertos*/
-#divCentralIzq li a:visited {
+#divCentralIzq li router-link:visited {
     text-decoration:none;
     color:black;
 }
  
 
 /*Se modifica el fondo del elemento de lista y su color de texto para brindar una idea sobre cual opción se está ubicando*/
-#divCentralIzq li a:hover {
+#divCentralIzq li router-link:hover {
     background-color:#62aac7;
     color:black;
 }
@@ -112,6 +128,7 @@ además acá se ocultan las sublistas para un estilo más dinámico*/
     background-color:white;
     display: none;
     position:static;
+    color:black;
 }
 
 /*Estos códigos mustran las sublistas cuando se ubica el cursor sobre las opciones de la lista*/
@@ -128,6 +145,5 @@ además acá se ocultan las sublistas para un estilo más dinámico*/
 <script>
 export default{
     name: "Menu",
-        
 }
 </script>
