@@ -65,6 +65,7 @@
               <th>Asignatura</th>
               <th>Profesor a cargo</th>
               <th>Contenido de la asignatura</th>
+              <th>Asistencia</th>
               <th>Eliminar</th>
             </tr>
             <tr
@@ -279,7 +280,6 @@ export default {
     },
     data() {
         return {
-            items : Object,
             it : [],
             buscador: '', //Estos valores se usará de filtro
             grado:'',
@@ -296,7 +296,7 @@ export default {
                 await Api.eliminar(row);
         }},
         añadir() {
-            this.items.push({
+            this.it.push({
                 nombre:'',
                 identificacion:'',
                 situacion:'',

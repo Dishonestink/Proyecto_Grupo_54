@@ -3,32 +3,16 @@
         <nav id="divCentralIzq"> <!--Se especifica la sección de la barra de navegación NAV-->
             <ul class="ul_p"> <!--Lista principal-->
 
+
                 <!--Primer elemento de lista-->
-                <li class="il_p">
-                    <a href="https://seranking.com/blog/wp-content/uploads/2021/01/404_01-min.jpg">Perfil administrativo</a>
-                    <ul class="ul_s"> 
-                        <!--Primer subelemento del primer elemento de lista-->
-                        <li class="il_s">
-                            <a href="https://seranking.com/blog/wp-content/uploads/2021/01/404_01-min.jpg">Información personal</a>
-                        </li>
-
-                    </ul>
-                </li>
-
-
-                <!--Segundo elemento de lista-->
                 <li class="il_p">
                     <a href="https://seranking.com/blog/wp-content/uploads/2021/01/404_01-min.jpg">Gestión Académica</a>
                     <ul class="ul_s">
                         <!--Primer subelemento del segundo elemento de la lista-->
                         <li class="il_s">
-                            <router-link to="/horarios-salones">Modificación de horarios y salones de clase</router-link>
-                        </li>
-                        <!--Segundo subelemento del segundo elemento de la lista-->
-                        <li class="il_s">
                             <router-link to="/cursos">Modificación de cursos</router-link>
                         </li>
-                        <!--Tercer subelemento del segundo elemento de la lista-->
+                        <!--Segundo subelemento del segundo elemento de la lista-->
                         <li class="il_s">
                             <router-link to="/Estudiantes">Modificación de estudiantes</router-link>
                         </li>
@@ -36,7 +20,7 @@
                 </li>
 
 
-                <!--Tercer elemento de lista-->
+                <!--Segundo elemento de lista-->
                 <li class="il_p">
                     <a href="https://seranking.com/blog/wp-content/uploads/2021/01/404_01-min.jpg">Cerrar Sesión</a>
                 </li>

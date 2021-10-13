@@ -80,23 +80,18 @@
                 <th>Identificación</th>
                 <th>Situación de estudiante</th>
                 <th>Grado actual</th>
+                <th>Calificaciones</th>
                 <th>Eliminar</th>
               </tr>
-              <!--<tr>
-                            <td>Oscar Campos </td>
-                            <td>234234 </td>
-                            <td>Matriculado </td>
-                            <td>6°-1</td>
-                        </tr>-->
               <tr
-                v-for="(item, index) in items"
+                v-for="(item, index) in it"
                 :key="item.id"
                 contenteditable="true"
               >
-                <td v-text="item.nombre"></td>
-                <td v-text="item.identificacion"></td>
-                <td v-text="item.situacion"></td>
-                <td v-text="item.grado"></td>
+                <td >{{item.nombre}}</td>
+                <td >{{item.identificacion}}</td>
+                <td >{{item.situacion}}</td>
+                <td >{{item.grado}}</td>
                 <td id="celdaEliminar">
                   <input
                     id="btnEliminar"
@@ -308,78 +303,7 @@ export default {
   },
   data() {
     return {
-      items: [
-        {
-          id: "1",
-          nombre: "Oscar Campos Ardila",
-          identificacion: "234234",
-          situacion: "Matriculado",
-          grado: "6°-1",
-        },
-        {
-          id: "2",
-          nombre: "Carmen Valenzuela Bernal",
-          identificacion: "234235",
-          situacion: "Matriculado",
-          grado: "6°-1",
-        },
-        {
-          id: "3",
-          nombre: "Oscar Campos Ardila",
-          identificacion: "234234",
-          situacion: "Matriculado",
-          grado: "6°-1",
-        },
-        {
-          id: "4",
-          nombre: "Carmen Valenzuela Bernal",
-          identificacion: "234235",
-          situacion: "Matriculado",
-          grado: "6°-1",
-        },
-        {
-          id: "5",
-          nombre: "Oscar Campos Ardila",
-          identificacion: "234234",
-          situacion: "Matriculado",
-          grado: "6°-1",
-        },
-        {
-          id: "6",
-          nombre: "Carmen Valenzuela Bernal",
-          identificacion: "234235",
-          situacion: "Matriculado",
-          grado: "6°-1",
-        },
-        {
-          id: "7",
-          nombre: "Oscar Campos Ardila",
-          identificacion: "234234",
-          situacion: "Matriculado",
-          grado: "6°-1",
-        },
-        {
-          id: "8",
-          nombre: "Carmen Valenzuela Bernal",
-          identificacion: "234235",
-          situacion: "Matriculado",
-          grado: "6°-1",
-        },
-        {
-          id: "9",
-          nombre: "Oscar Campos Ardila",
-          identificacion: "234234",
-          situacion: "Matriculado",
-          grado: "6°-1",
-        },
-        {
-          id: "10",
-          nombre: "Carmen Valenzuela Bernal ",
-          identificacion: "234235",
-          situacion: "Matriculado",
-          grado: "6°-1",
-        },
-      ],
+      it : [],
       buscador: "", //Estos valores se usará de filtro
       grado: "",
       curso: "",
@@ -388,11 +312,11 @@ export default {
   methods: {
     eliminar(row) {
       if (confirm("¿Está seguro de eliminar?")) {
-        this.items.splice(row, 1);
+        this.it.splice(row, 1);
       }
     },
     añadir() {
-      this.items.push({
+      this.it.push({
         nombre: "",
         identificacion: "",
         situacion: "",
