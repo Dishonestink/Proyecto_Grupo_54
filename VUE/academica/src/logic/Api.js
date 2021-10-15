@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import axios from "axios";
-const API = "https://academica-g54.herokuapp.com/cursos";
+/*const API = "https://academica-g54.herokuapp.com/cursos";*/
+const API = "http://localhost:3000/cursos";
 
 
 export default {
@@ -19,7 +20,7 @@ export default {
     },
 
     actualizar(info) {
-        return axios.put(API,info);
+        return axios.post(API,info);
     },
 
     eliminar(id) {

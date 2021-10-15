@@ -4,7 +4,7 @@ import Home from "../views/Home.vue";
 import VistaInicialDirector from "../views/VistaInicialDirector.vue";
 import ModificacionCursos from "../views/ModificacionCursos.vue";
 import ModificacionEstudiantes from "../views/ModificacionEstudiantes.vue";
-import ModificacionHorariosSalones from "../views/ModificacionHorariosSalones.vue";
+
 
 
 Vue.use(VueRouter);
@@ -38,11 +38,6 @@ const routes = [
     path:"/estudiantes",
     name:"ModificacionEstudiantes",
     component: ModificacionEstudiantes,
-  },
-  {
-    path:"/horarios-salones",
-    name:"ModificacionHorariosSalones",
-    component:ModificacionHorariosSalones,
   },
 ];
 
