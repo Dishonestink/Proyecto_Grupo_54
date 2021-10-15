@@ -77,7 +77,6 @@
               <td ><input v-model="it[index].profesor" ></td>
               <td ><input v-model="it[index].contenido" ></td>
               <td ><input v-model="it[index].asistencia" ></td>
-              <td ></td>
               <td id="celdaEliminar">
                 <button id="btnEliminar" v-on:click="eliminar(index)">
                   <img id="btnEliminarTrash" src="../assets/trashCan.png">
@@ -315,6 +314,7 @@ export default {
     },
     mounted() {
       Api.obtenerTodo().then(res => this.it = res.data);
+      console.log("montado")
       console.log(this.it)
     },
     methods: {
@@ -331,6 +331,7 @@ export default {
             })
         },
         guardar(id,asignatura,profesor,contenido,grado) {
+            console.log("guardado")
             console.log(id);
             let dicci = {"id":id,"asignatura":asignatura,"profesor":profesor,"contenido":contenido,"grado":grado};
             Api.actualizar(dicci);
