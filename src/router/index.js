@@ -1,5 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import VistaInicialDirector from "../views/VistaInicialDirector.vue";
+import ModificacionCursos from "../views/ModificacionCursos.vue";
+import ModificacionEstudiantes from "../views/ModificacionEstudiantes.vue";
 
 Vue.use(VueRouter);
 
@@ -21,7 +24,22 @@ const routes = [
     name: "AcountMiss",
     component: () => 
       import("../views/AcountMiss.vue"),
-  }
+  },
+  {
+    path: "/main",
+    name: "VistaInicialDirector",
+    component: VistaInicialDirector,
+  },
+  {
+    path:"/cursos",
+    name:"ModificacionCursos",
+    component: ModificacionCursos,
+  },
+  {
+    path:"/estudiantes",
+    name:"ModificacionEstudiantes",
+    component: ModificacionEstudiantes,
+  },
 ];
 
 const router = new VueRouter({

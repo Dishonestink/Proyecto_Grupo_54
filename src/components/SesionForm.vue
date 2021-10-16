@@ -34,6 +34,12 @@ export default {
             axios.post('http://localhost:3000/login',this.user).then(res => {
                 this.mensaje = res.data.msg;
                 document.getElementById('copy').style.marginTop = '45px';
+                if(res.data.msge === 'logueado'){
+                    setTimeout(() => {
+                            this.$router.push({
+                            name: "VistaInicialDirector"})
+                        }, 1000);
+                }
             });
             }
         }
