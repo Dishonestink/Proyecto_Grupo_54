@@ -12,7 +12,7 @@
           <span><h1 id="HeaderSentence"><b>Modificación de Cursos</b></h1></span>
           <div class="busqueda">
             <!--Se restringe un sección para la barra de busqueda y el botón sumbit-->
-            <h5>Buscador de cursos</h5>
+            <h5>Buscador de docentes:</h5>
             <input
               class="Barra"
               type="search"
@@ -20,7 +20,7 @@
               placeholder="¿A quién desea buscar?"
               v-model="buscador"
             />
-            <input for="Lupa" class="lupa" type="submit" value="&#8981;" />
+            <button for="Lupa" class="lupa" type="submit"><img id="imgLupa" src="../assets/lupa.png"></button>
           </div>
         </header>
         <!--Fin de Header-->
@@ -53,7 +53,7 @@
             <!--botones de tabla-->
             <button v-on:click="añadir()">Añadir</button>
             <!--<button>Eliminar</button>-->
-            <button v-on:click="guardar()">Guardar</button>
+            <!--<button v-on:click="guardar()">Guardar</button>-->
           </div>
         </div>
         <div class="ContenedorTabla">
@@ -62,28 +62,31 @@
             <!--Información de Tabla-->
             <tr>
               <th>Id</th>
+              <th>Grado</th>
               <th>Asignatura</th>
               <th>Profesor a cargo</th>
               <th>Contenido de la asignatura</th>
               <th>Asistencia</th>
               <th>Eliminar</th>
+              <th>Guardar</th>
             </tr>
-            <tr
-              v-for="(item, index) in it"
-              :key="item.id"
-              contenteditable="true"
-            >
-              <td >{{item.id}}</td>
-              <td >{{item.asignatura}}</td>
-              <td >{{item.profesor}}</td>
-              <td >{{item.contenido}}</td>
+            <tr v-for="(item, index) in it" :key="item.id" contenteditable="true">
+              <td ><input v-model="it[index].id" ></td>
+              <td ><input v-model="it[index].grado" ></td>
+              <td ><input v-model="it[index].asignatura" ></td>
+              <td ><input v-model="it[index].profesor" ></td>
+              <td ><input v-model="it[index].contenido" ></td>
+              <td ><input v-model="it[index].asistencia" ></td>
+              <td ></td>
               <td id="celdaEliminar">
-                <input
-                  type="button"
-                  id="btnEliminar"
-                  value="&#128465;"
-                  v-on:click="eliminar(index)"
-                />
+                <button id="btnEliminar" v-on:click="eliminar(index)">
+                  <img id="btnEliminarTrash" src="../assets/trashCan.png">
+                </button>
+              </td>
+              <td>
+                <button id="btnEliminar" v-on:click="guardar(it[index].id,item.asignatura,item.profesor,item.contenido,item.grado)">
+                  <img id="btnEliminarTrash" src="../assets/trashCan.png">
+                </button>
               </td>
             </tr>
             <!--Fin información de tabla-->
@@ -157,8 +160,12 @@ select {
   display: flex;
   flex-wrap: nowrap;
   text-align: left;
+  justify-content: center;
   padding: 10px;
-  margin: 20px;
+  padding-right: 0px;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top:20px;
   margin-bottom: 30px;
 }
 
@@ -168,6 +175,7 @@ select {
 }
 
 .Barra {
+  margin-left: 10px;
   height: 22px;
   width: 177px;
 }
@@ -179,13 +187,21 @@ select {
   justify-content: end;
   flex-wrap: nowrap;
   margin: 0px;
-  margin-left: 200px;
+  margin-left: auto;
 }
 
 .lupa {
   /*Se gira la posicion del simbolo de lupa*/
-  transform: rotate(-90deg);
   cursor: pointer;
+  min-width: 22px;
+  height: 22px;
+  padding: 0px;
+}
+
+#imgLupa {
+  max-width: 80%;
+  max-height: 80%;
+  margin-top: 10%;
 }
 
 #Métodos {
@@ -252,8 +268,17 @@ table {
     margin-right: 10%;*/
 }
 
+
+
 #btnEliminar {
-  margin-left: 40%;
+  margin-left: 30%;
+  min-width:30%;
+}
+
+#btnEliminarTrash {
+  margin:0%;
+  height: 20px;
+  min-width: 12px;
 }
 
 tr,
@@ -261,6 +286,8 @@ th,
 td {
   border: 1px solid black;
 }
+
+
 </style>
 
 <script>
@@ -303,8 +330,10 @@ export default {
                 grado:'',
             })
         },
-        async guardar() {
-          await Api.actulizar(this.it);
+        guardar(id,asignatura,profesor,contenido,grado) {
+            console.log(id);
+            let dicci = {"id":id,"asignatura":asignatura,"profesor":profesor,"contenido":contenido,"grado":grado};
+            Api.actualizar(dicci);
         },
     }
 }

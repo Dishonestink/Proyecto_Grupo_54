@@ -1,7 +1,8 @@
 /* eslint-disable prettier/prettier */
 import axios from "axios";
-/*const API = "https://academica-g54.herokuapp.com/Estudiantes";*/
-const API = "http://localhost:3000/Estidiantes";
+/*const API = "https://academica-g54.herokuapp.com/cursos";*/
+const API = "http://localhost:3000/Estudiantes";
+
 
 export default {
     obtenerTodo() {
@@ -19,7 +20,7 @@ export default {
     },
 
     actualizar(info) {
-        return axios.put(API,info);
+        return axios.post(API,info);
     },
 
     eliminar(id) {

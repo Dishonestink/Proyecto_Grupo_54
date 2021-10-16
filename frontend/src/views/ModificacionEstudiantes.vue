@@ -23,7 +23,7 @@
               placeholder="¿A quién desea buscar?"
               v-model="buscador"
             />
-            <input for="Lupa" class="lupa" type="submit" value="&#8981;" />
+            <button for="Lupa" class="lupa" type="submit"><img id="imgLupa" src="../assets/lupa.png"></button>
           </div>
         </header>
         <!--Fin de Header-->
@@ -67,7 +67,7 @@
 
             <button v-on:click="añadir()">Añadir</button>
             <!--<button>Eliminar</button>-->
-            <button v-on:click="guardar()">Guardar</button>
+            <!--<button v-on:click="guardar()">Guardar</button>-->
           </div>
         </div>
         <div class="ContenedorTabla">
@@ -78,29 +78,29 @@
               <tr>
                 <th>Nombre</th>
                 <th>Identificación</th>
-                <th>Situación de estudiante</th>
-                <th>Grado actual</th>
+                <th>Situación</th>
+                <th>Grado</th>
                 <th>Calificaciones</th>
                 <th>Eliminar</th>
+                <th>Guardar</th>
               </tr>
-              <tr
-                v-for="(item, index) in it"
-                :key="item.id"
-                contenteditable="true"
-              >
-                <td >{{item.nombre}}</td>
-                <td >{{item.identificacion}}</td>
-                <td >{{item.situacion}}</td>
-                <td >{{item.grado}}</td>
-                <td id="celdaEliminar">
-                  <input
-                    id="btnEliminar"
-                    type="button"
-                    value="&#128465;"
-                    v-on:click="eliminar(index)"
-                  />
-                </td>
-              </tr>
+              <tr v-for="(item, index) in it" :key="item.id" contenteditable="true">
+              <td ><input v-model="it[index].Nombre" ></td>
+              <td ><input v-model="it[index].Identificación" ></td>
+              <td ><input v-model="it[index].Situación" ></td>
+              <td ><input v-model="it[index].Grado" ></td>
+              <td ><input v-model="it[index].Calificaciones" ></td>
+              <td id="celdaEliminar">
+                <button id="btnEliminar" v-on:click="eliminar(index)">
+                  <img id="btnEliminarTrash" src="../assets/trashCan.png">
+                </button>
+              </td>
+              <td>
+                <button id="btnGuardar" v-on:click="guardar(it[index].Nombre,item.Identificacion,item.Situación,item.Grado,item.Calificaciones)">
+                  <img id="btnGuardarTrash" src="../assets/guardar.jpg">
+                </button>
+              </td>
+            </tr>
 
               <!--Fin información de tabla-->
             </table>
@@ -202,7 +202,7 @@ select {
 
 .lupa {
   /*Se gira la posicion del simbolo de lupa*/
-  transform: rotate(-90deg);
+
   cursor: pointer;
 }
 
@@ -293,6 +293,7 @@ td {
 import MainHead from "@/components/MainHead.vue";
 import Menu from "@/components/Menu.vue";
 import Footer from "@/components/Footer.vue";
+import Api from "@/logic/Api.js";
 
 export default {
   name: "ModificacionEstudiantes",
@@ -309,20 +310,30 @@ export default {
       curso: "",
     };
   },
-  methods: {
-    eliminar(row) {
-      if (confirm("¿Está seguro de eliminar?")) {
-        this.it.splice(row, 1);
-      }
+  mounted() {
+      Api.obtenerTodo().then(res => this.it = res.data);
+      console.log(this.it)
     },
-    añadir() {
-      this.it.push({
-        nombre: "",
-        identificacion: "",
-        situacion: "",
-        grado: "",
-      });
-    },
-  },
+    methods: {
+        async eliminar(row) {
+            if (confirm("¿Está seguro de eliminar?")){
+                await Api.eliminar(row);
+        }},
+        añadir() {
+            this.it.push({
+                Nombre:'',
+                Identificación:'',
+                Situación:'',
+                Grado:'',
+                Calificaciones:'',
+
+            })
+        },
+        guardar(Nombre,Identificación,Situación,Grado,Calificaciones) {
+            console.log();
+            let dicci = {"Nombre":Nombre,"Identificación":Identificación,"Situación":Situación,"Grado":Grado,"Calificaciones":Calificaciones};
+            Api.actualizar(dicci);
+        },
+    }
 };
 </script>
