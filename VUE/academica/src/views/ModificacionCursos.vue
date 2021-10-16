@@ -70,7 +70,7 @@
               <th>Eliminar</th>
               <th>Guardar</th>
             </tr>
-            <tr v-for="(item, index) in it" :key="item.id" contenteditable="true">
+            <tr v-for="(item, index) in it" :key="item.id" contenteditable="false">
               <td ><input v-model="it[index].id" ></td>
               <td ><input v-model="it[index].grado" ></td>
               <td ><input v-model="it[index].asignatura" ></td>
@@ -78,13 +78,13 @@
               <td ><input v-model="it[index].contenido" ></td>
               <td ><input v-model="it[index].asistencia" ></td>
               <td id="celdaEliminar">
-                <button id="btnEliminar" v-on:click="eliminar(index)">
+                <button id="btnEliminar" v-on:click="eliminar(item.id,item.asignatura,item.profesor,item.contenido,item.grado)">
                   <img id="btnEliminarTrash" src="../assets/trashCan.png">
                 </button>
               </td>
               <td>
                 <button id="btnEliminar" v-on:click="guardar(it[index].id,item.asignatura,item.profesor,item.contenido,item.grado)">
-                  <img id="btnEliminarTrash" src="../assets/trashCan.png">
+                  <img id="btnEliminarTrash" src="../assets/save.png">
                 </button>
               </td>
             </tr>
@@ -318,9 +318,12 @@ export default {
       console.log(this.it)
     },
     methods: {
-        async eliminar(row) {
+        eliminar(id,asignatura,profesor,contenido,grado) {
+            console.log(id);
             if (confirm("¿Está seguro de eliminar?")){
-                await Api.eliminar(row);
+              let dicci = {"id":id,"asignatura":asignatura,"profesor":profesor,"contenido":contenido,"grado":grado};
+              console.log(dicci);
+              Api.eliminar(dicci);
         }},
         añadir() {
             this.it.push({
@@ -331,9 +334,10 @@ export default {
             })
         },
         guardar(id,asignatura,profesor,contenido,grado) {
-            console.log("guardado")
+            console.log("guardado");
             console.log(id);
             let dicci = {"id":id,"asignatura":asignatura,"profesor":profesor,"contenido":contenido,"grado":grado};
+            console.log(dicci);
             Api.actualizar(dicci);
         },
     }

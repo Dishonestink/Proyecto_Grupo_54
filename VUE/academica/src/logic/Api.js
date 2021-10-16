@@ -23,8 +23,9 @@ export default {
         return axios.post(API,info);
     },
 
-    eliminar(id) {
-        const API2 = `${API}/${id}`;
-        return axios.delete(API2,id);
+    eliminar(info) {
+        /* const API2 = `${API}/${id}`;
+        return axios.delete(API2,id); */
+        return axios.delete(API,info);
     }
 }
